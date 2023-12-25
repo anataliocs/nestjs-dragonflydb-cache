@@ -2,6 +2,8 @@
 
 Reference application demonstrating using DragonflyDB as an API cache in NestJS.
 
+DragonflyDB is deployed as a docker container on [Spheron.network](https://spheron.network/).
+
 ## Local Build
 
 Install dependencies:
@@ -23,6 +25,9 @@ Spin up local environment (hot reloading included):
 # for nest app
 npm run start:dev
 
-# for redis cache
-docker compose up
+```
+
+Build Docker Container:
+```
+docker build -t nestjs-dragonflydb-cache .
 ```
