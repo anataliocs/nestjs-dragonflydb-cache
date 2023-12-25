@@ -8,7 +8,7 @@ You can create an account with (Github, Gitlab, Bitbucket or with Web3 providers
 
 Check out the [Spheron docs](https://docs.spheron.network/) for more info!
 
-## Local Build
+## Local Build(MacOS)
 
 Install dependencies:
 
@@ -31,12 +31,19 @@ npm run start:dev
 
 ```
 
-Build Docker Container:
+Build Docker Container for running locally on MacOS:
 ```
-docker build -t nestjs-dragonflydb-cache .
+docker build --platform linux/arm64 -t nestjs-dragonflydb-cache .
 ```
 
+
+
 ## Production Build
+
+Set Default Platform :
+```
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+```
 
 Check out the [Spheron docs for more info on deploying a Nest app](https://docs.spheron.network/server-guide/nest/)
 
