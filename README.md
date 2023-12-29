@@ -4,7 +4,7 @@ Reference application demonstrating using DragonflyDB as an API cache in NestJS.
 
 DragonflyDB is deployed as a docker container on [Spheron.network](https://spheron.network/).
 
-You can create an account with (Github, Gitlab, Bitbucket or with Web3 providers such as Ethereum)[https://app.spheron.network/#/signup]
+You can (create an account with Github, Gitlab, Bitbucket or with Metamask)[https://app.spheron.network/#/signup]
 
 Check out the [Spheron docs](https://docs.spheron.network/) for more info!
 
@@ -38,11 +38,19 @@ docker build --platform linux/arm64 -t nestjs-dragonflydb-cache .
 
 
 
-## Production Build
+## Spheron Build
 
-Set Default Platform :
+Build Docker Container for running on a [Spheron Compute Cluster](https://docs.spheron.network/compute/)
 ```
-export DOCKER_DEFAULT_PLATFORM=linux/amd64
+docker build --platform linux/amd64 -t nestjs-dragonflydb-cache .
+```
+
+For the DockerHub Repo:  https://hub.docker.com/repository/docker/chrisaspheron/nestjs-dragonflydb-cache/general
+
+Push to DockerHub
+```
+docker tag nestjs-dragonflydb-cache:latest chrisaspheron/nestjs-dragonflydb-cache:latest
+docker push chrisaspheron/nestjs-dragonflydb-cache:latest
 ```
 
 Check out the [Spheron docs for more info on deploying a Nest app](https://docs.spheron.network/server-guide/nest/)
