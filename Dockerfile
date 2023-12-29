@@ -1,6 +1,15 @@
 # Use an official Node.js runtime as the base image
 FROM node:18-alpine
 
+ARG REDIS_HOST
+ENV REDIS_HOST=$REDIS_HOST
+
+ARG REDIS_PORT
+ENV REDIS_PORT=$REDIS_PORT
+
+ARG OPENSEA_API_KEY
+ENV OPENSEA_API_KEY=$OPENSEA_API_KEY
+
 # Create app directory
 WORKDIR /usr/src/app
 
