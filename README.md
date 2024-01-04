@@ -8,6 +8,9 @@ You can (create an account with Github, Gitlab, Bitbucket or with Metamask)[http
 
 Check out the [Spheron docs](https://docs.spheron.network/) for more info!
 
+[Companion article with more details](https://blog.spheron.network/try-dragonflydb-on-spheron-for-a-30x-cache-speed-boost)
+
+
 ## Local Build(MacOS)
 
 Install dependencies:
